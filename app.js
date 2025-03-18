@@ -20,4 +20,18 @@ function criandoListaAmigos() {
     lista.appendChild(li);
   }
 }
+function sortearAmigo() {
+  let resultado = document.getElementById("resultado");
+
+  if (amigos.length === 0) {
+    resultado.innerHTML = "A lista de amigos está vazia!";
+    return;
+  }
+
+  let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+  let amigoSorteado = amigos[indiceAleatorio];
+
+  resultado.innerHTML =
+    "🎉 O amigo sorteado é: <strong>" + amigoSorteado + "</strong>!";
+}
 console.log(amigos);
